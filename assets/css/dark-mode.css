@@ -1,0 +1,50 @@
+body:has(.mode input:checked){
+    background-color: rgb(0, 0, 0);
+}
+:root:has(.mode input:checked){
+     /* COLOR  */
+     --color-default: #fff ;
+     --primary-hue: 37;
+     --primary-saturation: 82%;
+     --primary-lightness: 52%;
+     --color-secondary: #fff;
+     --color-tertiary: #9f9f9f;
+     --light-hue: 0;
+     --light-saturation: 0%;
+     --light-lightness: 9%;
+     --color-light-grey:#252525;
+}
+
+body:not(:has(:target)):has(.mode input:checked)  .home-link,
+body:has(.home:target):has(.mode input:checked) .home-link,
+body:has(.chefs:target):has(.mode input:checked) .chefs-link,
+body:has(.gallery:target):has(.mode input:checked) .gallery-link,
+body:has(.contacts:target):has(.mode input:checked) .contacts-link{
+    color: var(--color-default);
+}
+
+body:has(.home:target) .home-link::before,
+body:has(.chefs:target) .chefs-link::before,
+body:has(.gallery:target) .gallery-link::before,
+body:has(.contacts:target) .contacts-link::before{
+   width: 100%;
+}
+
+:has(.mode input:checked) nav ul li a:hover{
+    color: var(--color-default);
+}
+
+
+body:has(.mode input:checked) .mode .light{
+    display: block ;
+}
+body:has(.mode input:checked) .mode .dark{
+    display: none ;
+}
+
+body:has(.mode input:checked) .chefs-cards .card{
+   background-color: #fff;
+}
+body:has(.mode input:checked) .chefs-cards .card .card-content h3{
+    color: black;
+ }
